@@ -7,13 +7,22 @@ var userClickedPattern = [];
 var started = false;
 var level = 0;
 
-$(document).keypress(function() {
-  if (!started) {
-    $("#level-title").text("Level " + level);
+$(document).on('touchstart mousedown',function(){
+  if(!started){
+    $("#level-title").text("level " + level);
     nextSequence();
     started = true;
+    return false
   }
 });
+
+// $(document).keypress(function() {
+//   if (!started) {
+//     $("#level-title").text("Level " + level);
+//     nextSequence();
+//     started = true;
+//   }
+// });
 
 $(".btn").click(function() {
 
