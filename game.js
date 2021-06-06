@@ -16,13 +16,13 @@ $(document).on('touchstart mousedown',function(){
   }
 });
 
-// $(document).keypress(function() {
-//   if (!started) {
-//     $("#level-title").text("Level " + level);
-//     nextSequence();
-//     started = true;
-//   }
-// });
+$(document).keypress(function() {
+  if (!started) {
+    $("#level-title").text("Level " + level);
+    nextSequence();
+    started = true;
+  }
+});
 
 $(".btn").click(function() {
 
